@@ -1497,10 +1497,21 @@ window.__ModuleLoader__.load({
       }, children);
       const tone = (color) => mono ? "currentColor" : color;
       if (id === "weixin") {
+        const bigBubble = "M3 19C3 11.8 10.7 6 20.2 6S37.4 11.8 37.4 19s-7.7 13-17.2 13c-2 0-3.9-.2-5.7-.7L7 35.5l1.2-5.6C5.2 27.7 3 23.6 3 19Z";
+        const smallBubble = "M22.5 31C22.5 25.6 28.2 21.2 35.2 21.2S47.9 25.6 47.9 31 42.2 40.8 35.2 40.8c-1.8 0-3.5-.3-5.1-.8L24.4 43l1.3-4.9C23.6 36.5 22.5 33.9 22.5 31Z";
+        if (mono) {
+          return svg("0 0 48 48", [
+            h("path", { key: "bubble", d: bigBubble, fill: "currentColor", opacity: 0.5 }),
+            h("path", { key: "bubble2", d: smallBubble, fill: "currentColor" }),
+          ]);
+        }
         return svg("0 0 48 48", [
-          h("path", { key: "wing", d: "M10 8c0 1 7 3.5 14.745 16.744 0 0 4.184-4.363 6.255-5.744 1.5-1 2.712-1.332 2.712-1.332C33.712 15.156 29.5 8 28 8z", fill: tone("#00d6b9") }),
-          h("path", { key: "head", d: "M43.5 18.5c-1-.667-3.65-1.771-6.5-1.5a15 15 0 0 0-3.288.668S32.5 18 31 19c-2.07 1.38-6.255 5.744-6.255 5.744-1.428 1.397-3.05 2.732-5.245 3.756 0 0 7 3 11.5 3 5.063 0 7-3.5 7-3.5 1.5-3.305 3.5-7 5.5-9.5", fill: tone("#163c9a") }),
-          h("path", { key: "body", d: "M4 17.5v17c0 1 6 5.5 15 5.5 10 0 17.05-7.705 19-12 0 0-1.937 3.5-7 3.5-4.5 0-11.5-3-11.5-3-5.117-2.239-10.03-6.577-12.906-9.117C4.974 17.953 4 17.093 4 17.5", fill: tone("#3370ff") }),
+          h("path", { key: "bubble", d: bigBubble, fill: tone("#07c160") }),
+          h("path", { key: "bubble2", d: smallBubble, fill: tone("#0aa457") }),
+          h("circle", { key: "eye1", cx: 13, cy: 17, r: 2.6, fill: "#fff" }),
+          h("circle", { key: "eye2", cx: 24, cy: 17, r: 2.6, fill: "#fff" }),
+          h("circle", { key: "eye3", cx: 32, cy: 29.5, r: 2, fill: "#fff" }),
+          h("circle", { key: "eye4", cx: 41, cy: 29.5, r: 2, fill: "#fff" }),
         ]);
       }
       return svg("0 0 24 24", [
