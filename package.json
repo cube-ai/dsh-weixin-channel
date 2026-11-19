@@ -1,6 +1,6 @@
 {
   "name": "@cubeai/dsh-weixin-channel",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "DSH微信频道 — 将个人微信机器人接入本机 DeepSeek Harness。",
   "type": "module",
   "main": "src/index.js",
