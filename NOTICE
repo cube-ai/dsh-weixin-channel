@@ -1,0 +1,18 @@
+DSH WeChat Channel (DSH微信频道)
+Copyright 2026 cubeai
+
+This product includes software derived from:
+- dsh-im-connect (https://github.com/MichengAI/dsh-im-connect), Copyright MichengAI
+
+Licensed under the Apache License, Version 2.0.
+
+Modifications for this product:
+- Only the personal WeChat (weixin) channel is retained; the Feishu integration and all
+  other IM channel adapters and UI were removed.
+- The plugin now hosts exactly one WeChat channel, exposes a sidebar menu item instead
+  of a workspace tab, and blocks adding a second channel until the current one is removed.
+- Runtime identifiers, state directories, credential references, HTTP routes, client
+  module ids, locale namespaces, CSS prefixes, and session id prefixes were renamed so
+  this plugin can run independently alongside dsh-im-connect and dsh-feishu-channels.
+
+The original Apache License, Version 2.0 is included in the LICENSE file.

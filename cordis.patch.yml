@@ -1,0 +1,4 @@
+# DSH微信频道：把微信机器人应用接入本机 DeepSeek Harness。
+- insert:
+    - id: weixin-channel
+      name: '@cubeai/dsh-weixin-channel'
